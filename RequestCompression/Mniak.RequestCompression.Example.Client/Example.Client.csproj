@@ -18,4 +18,8 @@
 		<PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Mniak.Extensions.RequestCompression.Gzip\Mniak.Extensions.RequestCompression.Gzip.csproj" />
+	</ItemGroup>
+
 </Project>

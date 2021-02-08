@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Mniak.AspNetCore.RequestDecompression.Gzip;
 
 namespace Example.Server
 {
@@ -22,7 +21,8 @@ namespace Example.Server
             services.AddControllers();
             services.AddSingleton<LoggingMiddleware>();
             services.AddRequestDecompression()
-                .AddRequestDecompressor("gzip", new GzipDecompressor());
+                .AddGzipDecompression()
+                ;
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

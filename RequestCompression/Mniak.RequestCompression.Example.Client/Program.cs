@@ -1,5 +1,4 @@
 ﻿using Example.Client.Features;
-using Example.Client.Infrastructure.Compression;
 using Example.Client.Infrastructure.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,12 +20,11 @@ namespace Mniak.RequestCompression.Example.Client
                 {
                     services
                         .AddTransient<LoggingMessageHandler>()
-                        .AddTransient<GzipMessageHandler>()
                     ;
 
                     services.AddHttpClient<IMainWorker, MainWorker>()
                         .AddHttpMessageHandler<LoggingMessageHandler>()
-                        .AddHttpMessageHandler<GzipMessageHandler>()
+                        .AddGzipCompression()
                         ;
 
                     services.AddHostedService<MainService>();

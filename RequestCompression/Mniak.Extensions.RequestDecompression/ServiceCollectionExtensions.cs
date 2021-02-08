@@ -12,7 +12,7 @@ namespace Microsoft.Extensions.DependencyInjection
             return services;
         }
 
-        public static IServiceCollection AddRequestDecompressor(this IServiceCollection services, string key, IRequestDecompressor decoder)
+        public static IServiceCollection AddRequestDecompression(this IServiceCollection services, string key, IRequestDecompressor decoder)
         {
             services.AddSingleton(new RequestDecompressorRegistration(key, decoder));
             return services;
