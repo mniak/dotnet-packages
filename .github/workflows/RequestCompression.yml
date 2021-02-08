@@ -7,7 +7,7 @@ on:
     branches: [ master ]
     tags:
       - 'v*.*.*'
-      
+
 defaults:
   run:
     working-directory: ./RequestCompression
@@ -22,7 +22,7 @@ jobs:
       id: get_version
       run: |
         VERSION=${GITHUB_REF#refs/tags/v}
-        echo ::set-output name=version::${VERSION:-0.0.0}
+        echo ::set-output name=VERSION::${VERSION:-0.0.0}
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
@@ -30,7 +30,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore -c Release -p:Version=${{ steps.vars.outputs.version }}
+      run: dotnet build --no-restore -c Release -p:Version=${{ steps.get_version.outputs.VERSION }}
     - name: Test
       run: dotnet test --no-build --verbosity normal -c Release 
 
