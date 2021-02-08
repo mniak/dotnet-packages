@@ -21,7 +21,7 @@ jobs:
     - name: Get the version
       id: get_version
       run: |
-        VERSION=${GITHUB_REF#refs/tags/v}
+        VERSION=${GITHUB_REF#refs/*/v}
         echo ::set-output name=VERSION::${VERSION:-0.0.0}
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
