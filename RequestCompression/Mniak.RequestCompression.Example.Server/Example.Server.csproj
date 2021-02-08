@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mniak.AspNetCore.RequestDecompression.Gzip\Mniak.AspNetCore.RequestDecompression.Gzip.csproj" />
-    <ProjectReference Include="..\Mniak.AspNetCore.RequestDecompression\Mniak.AspNetCore.RequestDecompression.csproj" />
+    <ProjectReference Include="..\Mniak.Extensions.RequestDecompression.Gzip\Mniak.Extensions.RequestDecompression.Gzip.csproj" />
   </ItemGroup>
-
 
 </Project>

@@ -19,7 +19,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Mniak.HttpClient.RequestCompression.Gzip\Mniak.HttpClient.RequestCompression.Gzip.csproj" />
+	  <ProjectReference Include="..\Mniak.Extensions.RequestCompression.Gzip\Mniak.Extensions.RequestCompression.Gzip.csproj" />
 	</ItemGroup>
 
 </Project>
