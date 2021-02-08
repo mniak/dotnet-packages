@@ -1,4 +1,4 @@
-name: .NET
+name: RequestCompression
 
 env:
   NUGET_FEED: https://api.nuget.org/v3/index.json
