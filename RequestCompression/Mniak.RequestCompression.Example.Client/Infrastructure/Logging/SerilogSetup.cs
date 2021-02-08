@@ -2,13 +2,14 @@
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Mniak.RequestCompression.Example.Client.Infrastructure.Logging
+namespace Example.Client.Infrastructure.Logging
 {
     internal static class SerilogSetup
     {
         internal static void ConfigureLogger(HostBuilderContext context, LoggerConfiguration loggerConfiguration)
         {
             loggerConfiguration
+                .MinimumLevel.Debug()
                 .Destructure.JsonNetTypes()
                 .WriteTo.Console();
         }

@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Example.Client.Features;
+using Example.Client.Infrastructure.Compression;
+using Example.Client.Infrastructure.Logging;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Mniak.RequestCompression.Example.Client.Features;
-using Mniak.RequestCompression.Example.Client.Infrastructure.Compression;
-using Mniak.RequestCompression.Example.Client.Infrastructure.Logging;
 using Serilog;
 
 namespace Mniak.RequestCompression.Example.Client
@@ -26,7 +26,6 @@ namespace Mniak.RequestCompression.Example.Client
 
                     services.AddHttpClient<IMainWorker, MainWorker>()
                         .AddHttpMessageHandler<LoggingMessageHandler>()
-                        .AddHttpMessageHandler<GzipMessageHandler>()
                         .AddHttpMessageHandler<GzipMessageHandler>()
                         ;
 

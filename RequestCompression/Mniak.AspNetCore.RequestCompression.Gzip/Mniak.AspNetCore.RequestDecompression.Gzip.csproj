@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Mniak.AspNetCore.RequestCompression.Abstractions\Mniak.AspNetCore.RequestDecompression.Abstractions.csproj" />
+	</ItemGroup>
+
+</Project>

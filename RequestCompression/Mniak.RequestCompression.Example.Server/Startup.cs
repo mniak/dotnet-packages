@@ -1,12 +1,12 @@
+using Example.Server.Infrastructure.Logging.Cielo.Api.Infrastructure.Logging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Mniak.RequestCompression.Example.Server.Infrastructure.Compression;
-using Mniak.RequestCompression.Example.Server.Infrastructure.Logging.Cielo.Api.Infrastructure.Logging;
+using Mniak.AspNetCore.RequestDecompression.Gzip;
 
-namespace Mniak.RequestCompression.Example.Server
+namespace Example.Server
 {
     public class Startup
     {
@@ -21,7 +21,8 @@ namespace Mniak.RequestCompression.Example.Server
         {
             services.AddControllers();
             services.AddSingleton<LoggingMiddleware>();
-            services.AddSingleton<GzipRequestMiddleware>();
+            services.AddRequestDecompression()
+                .AddRequestDecompressor("gzip", new GzipDecompressor());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -35,7 +36,7 @@ namespace Mniak.RequestCompression.Example.Server
 
             app.UseAuthorization();
 
-            app.UseMiddleware<GzipRequestMiddleware>();
+            app.UseRequestDecompression();
             app.UseMiddleware<LoggingMiddleware>();
 
             app.UseEndpoints(endpoints =>

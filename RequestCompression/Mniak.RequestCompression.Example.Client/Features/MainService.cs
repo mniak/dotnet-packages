@@ -3,7 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Mniak.RequestCompression.Example.Client.Features
+namespace Example.Client.Features
 {
     public class MainService : BackgroundService
     {

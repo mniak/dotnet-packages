@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Mniak.RequestCompression.Example.Server.Features.Data
+namespace Example.Server.Features.Data
 {
     [ApiController]
     [Route("data")]

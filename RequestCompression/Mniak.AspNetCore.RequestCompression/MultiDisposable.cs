@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Mniak.RequestCompression.Example.Server.Infrastructure.Compression
+namespace Mniak.AspNetCore.RequestDecompression
 {
     internal class MultiDisposable : IDisposable
     {

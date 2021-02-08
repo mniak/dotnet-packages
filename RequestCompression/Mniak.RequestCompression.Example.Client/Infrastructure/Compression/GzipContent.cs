@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Mniak.RequestCompression.Example.Client.Infrastructure.Compression
+namespace Example.Client.Infrastructure.Compression
 {
     public class GzipContent : HttpContent
     {

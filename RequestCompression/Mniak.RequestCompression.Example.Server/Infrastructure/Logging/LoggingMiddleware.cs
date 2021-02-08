@@ -1,4 +1,4 @@
-﻿namespace Mniak.RequestCompression.Example.Server.Infrastructure.Logging
+﻿namespace Example.Server.Infrastructure.Logging
 {
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Http.Extensions;

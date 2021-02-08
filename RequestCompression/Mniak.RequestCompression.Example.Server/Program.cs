@@ -1,9 +1,9 @@
+using Example.Server.Infrastructure.Logging;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Mniak.RequestCompression.Example.Server.Infrastructure.Logging;
 using Serilog;
 
-namespace Mniak.RequestCompression.Example.Server
+namespace Example.Server
 {
     public static class Program
     {

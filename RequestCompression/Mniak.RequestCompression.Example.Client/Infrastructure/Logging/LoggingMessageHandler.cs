@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Mniak.RequestCompression.Example.Client.Infrastructure.Logging
+namespace Example.Client.Infrastructure.Logging
 {
     public class LoggingMessageHandler : DelegatingHandler
     {
