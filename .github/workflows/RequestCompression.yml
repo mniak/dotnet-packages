@@ -39,9 +39,5 @@ jobs:
       run: dotnet test --no-build --verbosity normal -c Release 
 
     - name: Publish NuGet
-      uses: brandedoutcast/publish-nuget@v2.5.5
+      run: dotnet nuget push ./nupkg/*.*nupkg --skip-duplicate --api-key ${{ secrets.NUGET_API_KEY }}
       if: startsWith(github.ref, 'refs/tags/v')
-      with:
-        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-        INCLUDE_SYMBOLS: true
-        TAG_COMMIT: true
