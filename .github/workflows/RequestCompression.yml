@@ -21,8 +21,12 @@ jobs:
     - name: Get the version
       id: get_version
       run: |
-        VERSION=${GITHUB_REF#refs/*/v}
-        echo ::set-output name=VERSION::${VERSION:-0.0.0}
+        VERSION=${GITHUB_REF#refs/tags/v}
+        if [[ $VERSION =~ "\d+\.\d+\.\d+" ]]; then
+          echo ::set-output name=VERSION::VERSION
+        else 
+          echo ::set-output name=VERSION::0.0.0
+        fi
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
