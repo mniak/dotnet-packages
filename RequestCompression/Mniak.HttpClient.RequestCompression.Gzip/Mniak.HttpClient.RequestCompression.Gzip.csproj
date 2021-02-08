@@ -7,8 +7,4 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\Mniak.AspNetCore.RequestDecompression.Abstractions\Mniak.AspNetCore.RequestDecompression.Abstractions.csproj" />
-	</ItemGroup>
-
 </Project>

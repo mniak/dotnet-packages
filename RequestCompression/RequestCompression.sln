@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compression", "Compression"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Decompression", "Decompression", "{63DAB682-705A-4D94-B7AB-4127464034BC}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mniak.HttpClient.RequestCompression.Gzip", "Mniak.HttpClient.RequestCompression.Gzip\Mniak.HttpClient.RequestCompression.Gzip.csproj", "{CE1B9ACD-DB65-446E-961D-609688F2C5A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,18 @@ Global
 		{74858CE7-667A-4B0F-9210-D8F515C123BB}.Release|x64.Build.0 = Release|Any CPU
 		{74858CE7-667A-4B0F-9210-D8F515C123BB}.Release|x86.ActiveCfg = Release|Any CPU
 		{74858CE7-667A-4B0F-9210-D8F515C123BB}.Release|x86.Build.0 = Release|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Debug|x64.Build.0 = Debug|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Debug|x86.Build.0 = Debug|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Release|x64.ActiveCfg = Release|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Release|x64.Build.0 = Release|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Release|x86.ActiveCfg = Release|Any CPU
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +113,7 @@ Global
 		{F8A853ED-CD71-49CE-AA7A-6F200B0DE57B} = {63DAB682-705A-4D94-B7AB-4127464034BC}
 		{4A2A9C1F-2F75-4536-8F57-1BE81B931051} = {63DAB682-705A-4D94-B7AB-4127464034BC}
 		{74858CE7-667A-4B0F-9210-D8F515C123BB} = {63DAB682-705A-4D94-B7AB-4127464034BC}
+		{CE1B9ACD-DB65-446E-961D-609688F2C5A5} = {10BBF059-E669-458D-95EB-426AF3E905F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D0D0C92-8602-42AC-9E93-DA6025106CEF}
