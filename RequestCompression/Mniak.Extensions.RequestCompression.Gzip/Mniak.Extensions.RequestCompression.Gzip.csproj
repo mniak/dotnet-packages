@@ -26,9 +26,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	</ItemGroup>
-
-	<ItemGroup>
 		<ProjectReference Include="..\Mniak.HttpClient.RequestCompression.Gzip\Mniak.HttpClient.RequestCompression.Gzip.csproj" />
 	</ItemGroup>
 
