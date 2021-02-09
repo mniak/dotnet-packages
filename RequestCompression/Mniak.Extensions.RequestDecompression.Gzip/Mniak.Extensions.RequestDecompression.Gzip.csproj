@@ -17,13 +17,17 @@
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.12" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net5.0' ">
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Mniak.AspNetCore.RequestDecompression.Gzip\Mniak.AspNetCore.RequestDecompression.Gzip.csproj" />
-	  <ProjectReference Include="..\Mniak.Extensions.RequestDecompression\Mniak.Extensions.RequestDecompression.csproj" />
+		<ProjectReference Include="..\Mniak.AspNetCore.RequestDecompression.Gzip\Mniak.AspNetCore.RequestDecompression.Gzip.csproj" />
+		<ProjectReference Include="..\Mniak.Extensions.RequestDecompression\Mniak.Extensions.RequestDecompression.csproj" />
 	</ItemGroup>
 
 </Project>
