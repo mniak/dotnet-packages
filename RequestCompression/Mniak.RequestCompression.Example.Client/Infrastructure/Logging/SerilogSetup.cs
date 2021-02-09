@@ -9,7 +9,7 @@ namespace Example.Client.Infrastructure.Logging
         internal static void ConfigureLogger(HostBuilderContext context, LoggerConfiguration loggerConfiguration)
         {
             loggerConfiguration
-                .MinimumLevel.Debug()
+                //.MinimumLevel.Debug()
                 .Destructure.JsonNetTypes()
                 .WriteTo.Console();
         }

@@ -1,8 +1,9 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mniak/dotnet-packages/RequestCompression)
+
 Request Compression
 =======================
 
-Components for request compression in .NET.
-
+Enables `HttpClient` to make compressed requests and enables the server to understand compressed requests.
 
 ### Motivation
 Well, sometimes the request payload is so big that it ends up affecting performance or stumbling on reverse proxy limits.
