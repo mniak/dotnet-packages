@@ -18,5 +18,11 @@ namespace Example.Client.Infrastructure.Compression
             request.Content = new GzipContent(request.Content, contentEncoding);
             return base.SendAsync(request, cancellationToken);
         }
+
+        public GzipMessageHandler WithNewInnerHandler()
+        {
+            InnerHandler = new HttpClientHandler();
+            return this;
+        }
     }
 }
