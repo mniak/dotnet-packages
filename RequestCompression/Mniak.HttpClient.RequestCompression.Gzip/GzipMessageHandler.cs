@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Example.Client.Infrastructure.Compression
+namespace Mniak.HttpClient.RequestCompression.Gzip
 {
     public class GzipMessageHandler : DelegatingHandler
     {
@@ -15,7 +15,8 @@ namespace Example.Client.Infrastructure.Compression
         }
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            request.Content = new GzipContent(request.Content, contentEncoding);
+            if (request.Content != null)
+                request.Content = new GzipContent(request.Content, contentEncoding);
             return base.SendAsync(request, cancellationToken);
         }
 
