@@ -1,4 +1,4 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mniak/dotnet-packages/RequestCompression)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mniak/dotnet-packages/RequestCompression)](https://github.com/mniak/dotnet-packages/actions?query=workflow%3ARequestCompression)
 
 Request Compression
 =======================
