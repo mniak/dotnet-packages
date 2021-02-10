@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Net.Http;
@@ -11,9 +10,9 @@ namespace Mniak.HttpClient.RequestCompression.Gzip
     {
         private readonly HttpContent inner;
 
-        public GzipContent(HttpContent? inner, string contentEncoding)
+        public GzipContent(HttpContent inner, string contentEncoding)
         {
-            this.inner = inner ?? throw new ArgumentNullException(nameof(inner));
+            this.inner = inner;
 
             // copy original headers
             foreach (var header in this.inner.Headers)
