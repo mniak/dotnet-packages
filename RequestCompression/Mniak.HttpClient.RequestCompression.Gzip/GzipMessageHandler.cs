@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Example.Client.Infrastructure.Compression
+namespace Mniak.HttpClient.RequestCompression.Gzip
 {
     public class GzipMessageHandler : DelegatingHandler
     {

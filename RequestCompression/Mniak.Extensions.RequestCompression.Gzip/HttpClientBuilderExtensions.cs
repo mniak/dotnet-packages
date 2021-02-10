@@ -1,4 +1,4 @@
-﻿using Example.Client.Infrastructure.Compression;
+﻿using Mniak.HttpClient.RequestCompression.Gzip;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
