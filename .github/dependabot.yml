@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/RequestCompression"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Microsoft.IO.RecyclableMemoryStream
+    versions:
+    - 1.4.1
+  - dependency-name: Microsoft.Extensions.Http
+    versions:
+    - 5.0.0
+  - dependency-name: Microsoft.Extensions.DependencyInjection.Abstractions
+    versions:
+    - 5.0.0
